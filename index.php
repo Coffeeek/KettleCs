@@ -27,5 +27,6 @@ if($url === '/') {
     }
 }
 
-echo $Page.'<br>';
-echo $Module;
+if(file_exists('application/pages/'.$Page.'.php')) {
+    include 'application/pages/'.$Page.'.php';
+}
